@@ -50,7 +50,8 @@
 			<label class="col-sm-2 col-form-label">UF</label>
 			<input type="text" th:field="*{uf}" />
 			
-			<button type="submit" class="btn btn-danger">Cadastrar</button>    
+			<button type="submit" class="btn btn-danger">Cadastrar</button>
+			<input type="hidden" th:value="${empresa.id}" th:attr="name='id'"/>    
 		</fieldset>
 	</form>
 

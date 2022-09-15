@@ -33,6 +33,9 @@ public class EmpresaControle {
 	@PostMapping("/salvarEmpresa")
 	public String salvar(@ModelAttribute("empresa") Empresa empresa, Model modelo) {
 		
+		System.out.print(empresa.getId());
+		
+		
 		empresaRepositorio.save(empresa);
 		
 		modelo.addAttribute("listaEmpresas", empresaRepositorio.findAll());
